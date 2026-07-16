@@ -29,33 +29,17 @@ app.command("/aerodynamic-help", async ({ ack, respond }) => {
     text:
 `Available Commands:
 /aerodynamic-ping - Check bot latency
-/aerodynamic-catfact - Get a cat fact`
+/aerodynamic-737 - Get an Airbus 737 fun fact
+/aerodynamic-cessna172 - Get a Cessna 172p Skyhawk fun fact`
   });
 });
 
-app.command("/aerodynamic-catfact", async ({ ack, respond }) => {
+app.command("/aerodynamic-737", async ({ command, ack, respond }) => {
   await ack();
-
-  try {
-    const response = await axios.get("https://catfact.ninja/fact");
-    await respond({ text: `Cat Fact:\n${response.data.fact}` });
-  } catch (err) {
-    await respond({ text: "Failed to fetch a cat fact." });
-  }
+  await respond({ text: "As the best-selling commercial jet in history, the 737 features incredible statistics: \n a 737 takes off or lands globally every five seconds, and over 1,000 are airborne at any given moment. "})
 });
 
-app.command("/aerodynamic-joke", async ({ ack, respond }) => {
+app.command("/aerodynamic-cessna172", async ({ command, ack, respond }) => {
   await ack();
-
-  try {
-    const response = await axios.get("https://official-joke-api.appspot.com/random_joke");
-    await respond({
-      text:
-`${response.data.setup}
-
-${response.data.punchline}`
-    });
-  } catch (err) {
-    await respond({ text: "Failed to fetch a joke." });
-  }
+  await respond({ text: "The Cessna 172 Skyhawk is the most-produced aircraft in aviation history, with over 44,000 manufactured since 1956.  "})
 });
