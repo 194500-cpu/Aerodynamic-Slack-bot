@@ -31,6 +31,7 @@ app.command("/aerodynamic-help", async ({ ack, respond }) => {
     text:
 `Available Commands:
 /aerodynamic-ping - Check bot latency
+<<<<<<< HEAD
 /aerodynamic-737 - Get a Boeing 737 fun fact
 /aerodynamic-cessna172 - Get a Cessna 172p Skyhawk fun fact
 /aerodynamic-wright - Get a Wright Flyer fun fact
