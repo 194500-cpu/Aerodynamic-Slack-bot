@@ -36,7 +36,7 @@ app.command("/aerodynamic-help", async ({ ack, respond }) => {
 /aerodynamic-cessna172 - Get a Cessna 172p Skyhawk fun fact
 /aerodynamic-wright - Get a Wright Flyer fun fact
 /aerodynamic-blackbird - Get an SR-71 Blackbird fun fact
-/aerodynamic-A380 - Get an Airbus A380 fun fact
+/aerodynamic-a380 - Get an Airbus A380 fun fact
 /aerodynamic-747 - Get a Boeing 747 fun fact
 /aerodynamic-concorde - Get a Concorde fun fact
 /aerodynamic-beluga - Get an Airbus Beluga fun fact`
@@ -126,7 +126,7 @@ app.command("/aerodynamic-blackbird", async ({ command, ack, respond }) => {
 });
 
 
-app.command("/aerodynamic-A380", async ({ command, ack, respond }) => {
+app.command("/aerodynamic-a380", async ({ command, ack, respond }) => {
   await ack();
   await respond({
     blocks: [
