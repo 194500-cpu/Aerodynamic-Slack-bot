@@ -13,6 +13,7 @@ Commands:
 /aerodynamic-747 - Get a Boeing 747 fun fact<br>
 /aerodynamic-concorde - Get a Concorde fun fact<br>
 /aerodynamic-beluga - Get an Airbus Beluga fun fact<br>
+/aerodynamic-versus [plane1] [plane2] - Compare two planes <br>
 
 Go test it out on the bot spam channel in hackclub slack!<br>
 
