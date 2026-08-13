@@ -24,7 +24,7 @@ app.command("/aerodynamic-ping", async ({ command, ack, respond }) => {
   console.log("bot is running!");
 })();
 
-//this is help
+//this is help => updated 10/8/26
 app.command("/aerodynamic-help", async ({ ack, respond }) => {
   await ack();
   await respond({
@@ -38,7 +38,8 @@ app.command("/aerodynamic-help", async ({ ack, respond }) => {
 /aerodynamic-a380 - Get an Airbus A380 fun fact
 /aerodynamic-747 - Get a Boeing 747 fun fact
 /aerodynamic-concorde - Get a Concorde fun fact
-/aerodynamic-beluga - Get an Airbus Beluga fun fact`
+/aerodynamic-beluga - Get an Airbus Beluga fun fact
+/aerodynamic-versus [plane1] [plane2] - compare the speeds of two planes. You can only compare the planes listed above.`
   });
 });
 //this is 737 fun fact
@@ -104,6 +105,7 @@ app.command("/aerodynamic-wright", async ({ command, ack, respond }) => {
   })
 });
 
+//Sr blackbird info
 app.command("/aerodynamic-blackbird", async ({ command, ack, respond }) => {
   await ack();
   await respond({
@@ -124,7 +126,7 @@ app.command("/aerodynamic-blackbird", async ({ command, ack, respond }) => {
   })
 });
 
-
+// A380 info, but for some reason slack only accepted lowercase a commands
 app.command("/aerodynamic-a380", async ({ command, ack, respond }) => {
   await ack();
   await respond({
@@ -145,6 +147,7 @@ app.command("/aerodynamic-a380", async ({ command, ack, respond }) => {
   })
 });
 
+//747 info
 app.command("/aerodynamic-747", async ({ command, ack, respond }) => {
   await ack();
   await respond({
@@ -165,6 +168,7 @@ app.command("/aerodynamic-747", async ({ command, ack, respond }) => {
   })
 });
 
+//concorde info
 app.command("/aerodynamic-concorde", async ({ command, ack, respond }) => {
   await ack();
   await respond({
@@ -185,6 +189,7 @@ app.command("/aerodynamic-concorde", async ({ command, ack, respond }) => {
   })
 });
 
+//ksi plane info
 app.command("/aerodynamic-beluga", async ({ command, ack, respond }) => {
   await ack();
   await respond({
@@ -203,4 +208,62 @@ app.command("/aerodynamic-beluga", async ({ command, ack, respond }) => {
       }
     ]
   })
+});
+
+//note the 747 is a family, thus i will include specific variants
+const data_for_planes = {
+  "747-8": {
+    name: "Boeing 747-8",
+    maxSpeed: "1062"
+  },
+  "a380": {
+    name: "Airbus A380-800",
+    maxSpeed: "1185"
+  },
+  "787-9": {
+    name: "Boeing 787-9",
+    maxSpeed: 954,
+  },
+  "concorde": {
+    name: "concorde",
+    maxSpeed: 2180
+  },
+  "blackbird": {
+    name: "SR-71 Blackbird",
+    maxSpeed: 3540
+  },
+  "wright": {
+    name: "Wright Flyer",
+    maxSpeed: 48
+  },
+  "cessna172": {
+    name: "Cessna 172 Skyhawk",
+    maxSpeed: 302
+  },
+  "beluga": {
+    name: "Airbus Beluga",
+    maxSpeed: 878
+  },
+  
+}
+
+app.command("/aerodynamic-versus", async ({ command, ack, respond }) => {
+  await ack();
+  var inputs = command.text.trim().toLowerCase().split(/\s+/);
+  var stat1 = data_for_planes[inputs[0]];
+  var stat2 = data_for_planes[inputs[1]];
+  var winner = "";
+  var loser = "";
+  if (stat1.maxSpeed > stat2.maxSpeed) {
+    winner = stat1;
+    loser = stat2;
+  } else {
+    winner = stat2;
+    loser = stat1;
+  }
+  await respond(
+    `${winner.name} has a max speed of ${winner.maxSpeed} km/h\n` +
+    `${loser.name} has a max speed of ${loser.maxSpeed} km/h\n` +
+    `${winner.name} wins as it is ${winner.maxSpeed - loser.maxSpeed} faster!`
+  )
 });
