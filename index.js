@@ -242,7 +242,7 @@ const data_for_planes = {
     maxSpeed: 954,
   },
   "concorde": {
-    name: "concorde",
+    name: "Concorde",
     maxSpeed: 2180
   },
   "blackbird": {
@@ -281,6 +281,6 @@ app.command("/aerodynamic-versus", async ({ command, ack, respond }) => {
   await respond(
     `${winner.name} has a max speed of ${winner.maxSpeed} km/h\n` +
     `${loser.name} has a max speed of ${loser.maxSpeed} km/h\n` +
-    `${winner.name} wins as it is ${winner.maxSpeed - loser.maxSpeed} faster!`
+    `${winner.name} wins as it is ${winner.maxSpeed - loser.maxSpeed} km/h faster!`
   )
 });
