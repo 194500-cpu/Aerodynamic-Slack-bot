@@ -31,15 +31,32 @@ app.command("/aerodynamic-help", async ({ ack, respond }) => {
     text:
 `Available Commands:
 /aerodynamic-ping - Check bot latency
+
 /aerodynamic-737 - Get a Boeing 737 fun fact
+
 /aerodynamic-cessna172 - Get a Cessna 172p Skyhawk fun fact
+
 /aerodynamic-wright - Get a Wright Flyer fun fact
+
 /aerodynamic-blackbird - Get an SR-71 Blackbird fun fact
+
 /aerodynamic-a380 - Get an Airbus A380 fun fact
+
 /aerodynamic-747 - Get a Boeing 747 fun fact
+
 /aerodynamic-concorde - Get a Concorde fun fact
+
 /aerodynamic-beluga - Get an Airbus Beluga fun fact
-/aerodynamic-versus [plane1] [plane2] - compare the speeds of two planes. You can only compare the planes listed above.`
+
+/aerodynamic-versus [plane1] [plane2] - compare the speeds of two plane. Usage guide is below:
+
+Available:
+747-8, a380, 787-9, concorde, blackbird, wright, cessna172, beluga
+
+Example:
+/aerodynamic-versus concorde blackbird
+
+`
   });
 });
 //this is 737 fun fact
