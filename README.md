@@ -1,4 +1,4 @@
-AERODYNAMIC SLACK BOT:
+<img width="739" height="415" alt="images" src="https://github.com/user-attachments/assets/ba8a2e85-8b8a-4cfa-9fbb-aaf7b695598d" />
 
 This slack bot is full of fun facts about planes!
 
@@ -17,4 +17,6 @@ Commands:
 
 Go test it out on the bot spam channel in hackclub slack!<br>
 
-https://hackclub.enterprise.slack.com/archives/C0P5NE354
+https://hackclub.enterprise.slack.com/archives/C0P5NE354<br>
+
+Have fun!
