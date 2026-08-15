@@ -1,4 +1,5 @@
-![Uploading Screenshot 2026-08-15 120653.png…]()
+<img width="1000" height="563" alt="night+flight-1920w" src="https://github.com/user-attachments/assets/5099501d-6972-4fcb-8966-9a1e0e4ee28d" />
+
 
 This slack bot is full of fun facts about planes!
 
