@@ -1,4 +1,4 @@
-<img width="739" height="415" alt="images" src="https://github.com/user-attachments/assets/ba8a2e85-8b8a-4cfa-9fbb-aaf7b695598d" />
+![Uploading Screenshot 2026-08-15 120653.png…]()
 
 This slack bot is full of fun facts about planes!
 
